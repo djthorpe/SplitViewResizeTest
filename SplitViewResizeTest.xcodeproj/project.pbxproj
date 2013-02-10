@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6ED1FBFD16C811BD0084A33E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED1FBFC16C811BD0084A33E /* Cocoa.framework */; };
+		6ED1FC1D16C812B80084A33E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED1FC1C16C812B80084A33E /* main.m */; };
+		6ED1FC1F16C8131C0084A33E /* SplitViewResizeTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1FC1E16C8131C0084A33E /* SplitViewResizeTest.xib */; };
+		6ED1FC2316C813CA0084A33E /* grabber.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1FC2116C813CA0084A33E /* grabber.png */; };
+		6ED1FC2416C813CA0084A33E /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1FC2216C813CA0084A33E /* gradient.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,11 @@
 		6ED1FBFF16C811BD0084A33E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6ED1FC0016C811BD0084A33E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6ED1FC0116C811BD0084A33E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6ED1FC1A16C812910084A33E /* SplitViewResizeTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SplitViewResizeTest.plist; sourceTree = "<group>"; };
+		6ED1FC1C16C812B80084A33E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6ED1FC1E16C8131C0084A33E /* SplitViewResizeTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitViewResizeTest.xib; sourceTree = "<group>"; };
+		6ED1FC2116C813CA0084A33E /* grabber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grabber.png; sourceTree = "<group>"; };
+		6ED1FC2216C813CA0084A33E /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,10 @@
 		6ED1FBE816C8116D0084A33E = {
 			isa = PBXGroup;
 			children = (
+				6ED1FC1E16C8131C0084A33E /* SplitViewResizeTest.xib */,
+				6ED1FC2016C813CA0084A33E /* resources */,
+				6ED1FC1A16C812910084A33E /* SplitViewResizeTest.plist */,
+				6ED1FC1C16C812B80084A33E /* main.m */,
 				6ED1FBFB16C811BD0084A33E /* Frameworks */,
 				6ED1FBF916C811BD0084A33E /* Products */,
 			);
@@ -63,6 +76,15 @@
 				6ED1FC0116C811BD0084A33E /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6ED1FC2016C813CA0084A33E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6ED1FC2116C813CA0084A33E /* grabber.png */,
+				6ED1FC2216C813CA0084A33E /* gradient.png */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED1FC1F16C8131C0084A33E /* SplitViewResizeTest.xib in Resources */,
+				6ED1FC2316C813CA0084A33E /* grabber.png in Resources */,
+				6ED1FC2416C813CA0084A33E /* gradient.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ED1FC1D16C812B80084A33E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +186,6 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SplitViewResizeTest/SplitViewResizeTest-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -170,11 +195,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "SplitViewResizeTest/SplitViewResizeTest-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SplitViewResizeTest.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -195,15 +220,14 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SplitViewResizeTest/SplitViewResizeTest-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "SplitViewResizeTest/SplitViewResizeTest-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SplitViewResizeTest.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
